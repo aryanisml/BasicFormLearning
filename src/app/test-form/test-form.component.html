@@ -1,0 +1,35 @@
+<div [formGroup]="testForm">
+    <div>
+        <span>First Name</span>
+        <div>
+            <input type="text" name="fname" id="fname" formControlName="fname">
+        </div>
+    </div>
+    <div>
+        <span>Last Name</span>
+        <div>
+            <input type="text" name="lname" id="lname" formControlName="lname">
+        </div>
+    </div>
+    <div>
+        <span>Full Name</span>
+        <div>
+            <input type="text" name="name" id="name" formControlName="name">
+        </div>
+    </div>
+    <div>
+        <span>Salary</span>
+        <div>
+            <input type="text" name="salary" id="salary" formControlName="salary">
+        </div>
+    </div>
+    <div>
+        <span>MySample</span>
+        <div>
+            {{mySample}}
+        </div>
+    </div>
+</div>
+<button (click)="show()">Show</button>
+
+<ng-content></ng-content>
