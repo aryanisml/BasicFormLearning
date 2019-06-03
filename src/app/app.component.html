@@ -24,9 +24,6 @@
 </div>
 
 <app-test-form [mySample]="mySample">
-    <div *ngIf="myChange else sampleElse">
-        <b>Content Projection</b>
-    </div>
     <ng-template #sampleElse>
         <ul>
             <li>1</li>
@@ -34,5 +31,9 @@
             <li>3</li>
             <li>4</li>
         </ul>
+    </ng-template>
+
+    <ng-template [ngIf]="myChange" [ngIfElse]="sampleElse">
+        <b>Content Projection</b>
     </ng-template>
 </app-test-form>
